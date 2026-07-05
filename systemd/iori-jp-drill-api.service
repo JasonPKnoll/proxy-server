@@ -1,0 +1,14 @@
+[Unit]
+Description=Iori jp-drill API
+After=network.target
+
+[Service]
+Type=simple
+User=jason
+WorkingDirectory=/home/jason/apps/jp-drill/backend
+ExecStart=/usr/local/bin/jp-drill-api
+Environment=PORT=30000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
