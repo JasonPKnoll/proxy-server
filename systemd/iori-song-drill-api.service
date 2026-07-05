@@ -1,0 +1,14 @@
+[Unit]
+Description=Iori song-drill API
+After=network.target
+
+[Service]
+Type=simple
+User=jason
+WorkingDirectory=/home/jason/apps/song-drill/backend
+ExecStart=/usr/local/bin/song-drill-api
+Environment=PORT=30001
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
